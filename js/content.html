@@ -1,0 +1,42 @@
+ <div class="col-sm-6 text-left" style="display: inline-block;">
+   <div style="display:inline">
+   <p><img style="float:right;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHGSURBVGhD7dk/KEVhGMfxi0JSSv6UgWRRsslsk5TMysRksNhEShmsJJksSimDiDIyiMFkMYoilIFC/n6f/Tnued9zr+el91ef9Zzfe2/nnPc8JxcT83dSizHs4wpveMI5VtCLEgSbUkzgAV95HKELwaUaW9BKJ3nBMIJJGbahlc3nE4MIItPQSqYl108LTNOIR2gFXazBNFPQirn6QAPMcgKtmI9RmOUVWikfizBJPbRCvjZhkmZohXztwCRxIQniQrImLiSB2UKqoBXyZbpNuYdWyscczLIHrZSPAZhlCFopV3coh1nkOrmAVs7FDMzTB61cWmeoQBCZhVYynxt0IKi4vmTdoh3BpRNa4SSHCDJxIaHl3yxkBFrhJDIXrkEwkdvnOmRqqBX+ySXkBzB9jnRDBgYyk9JKurjGJGSS/yuRibts7g6gFcpKxqcLaEPR0oNTaAUKTb6pLKEOBUsllqGdsNjk6d+PzJG7yjG0k/wWuYnIByTvyD9RyNluVvI5zyvz0A5o5RnOO+VWvEM7oKVdOCXrV6hikR+3CaljfYH/RHYCqSNvbtpBQiBvo6ki+x7tAKFYRarIZGQjYOOIiYlxSi73DS+Aj3yeS/Y/AAAAAElFTkSuQmCC">
+   </p>
+</div>
+<br>
+    <p style="float:right">Lincoln Isaac <span class="caret"></span></p>
+    <br>
+ <div ng-if="query" class="mediaTile">
+      <ul ng-repeat="x in myData | filter:query">
+        <br>
+        <li><strong>{{x.name}}</strong> </li>
+        <div class="btn-group">
+        <img ng-src="{{ x.img}}"  class="media-tile" style= "float:left;">
+        <button class="message" ng-model="Message" style="width:45%" value="Show Alert" ng-click="showme=true" >Send Message</button> 
+        <input ng-show="showme" type="text" name="user" ng-model="user" required >
+        <button ng-show="showme" style="width:15%" value="Show Alert" ng-click="showme=false" >Done</button> 
+        
+        
+
+        <div heart-rating></div>
+        
+        </div>
+        <br>
+        <li> {{x.Description}}</li>
+        
+        </ul>
+
+     
+     <table class="tbl">
+       
+     <tr ng-repeat="k in myData | filter:query">
+       
+       <td table-p> </td>
+       <td table-2> </td>
+    </tr>
+      </table>
+      
+      
+ </div>
+ </div>
+  
